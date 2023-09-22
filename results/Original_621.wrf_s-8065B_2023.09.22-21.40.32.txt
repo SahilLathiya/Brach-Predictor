@@ -1,0 +1,38 @@
+Script started on 2023-09-22 21:40:32+05:30 [TERM="screen.xterm-256color" TTY="/dev/pts/1" COLUMNS="145" LINES="35"]
+WARNING: physical memory size is smaller than virtual memory size.
+WARNING: option --warmup_instructions is deprecated. Use --warmup-instructions instead.
+WARNING: option --simulation_instructions is deprecated. Use --simulation-instructions instead.
+
+*** ChampSim Multicore Out-of-Order Simulator ***
+Warmup Instructions: 200000000
+Simulation Instructions: 500000000
+Number of CPUs: 1
+Page size: 4096
+
+Off-chip DRAM Size: 4 GiB Channels: 1 Width: 64-bit Data Race: 3200 MT/s
+Heartbeat CPU 0 instructions: 10000001 cycles: 2605375 heartbeat IPC: 3.838 cumulative IPC: 3.838 (Simulation time: 00 hr 00 min 15 sec)
+Heartbeat CPU 0 instructions: 20000001 cycles: 5105375 heartbeat IPC: 4 cumulative IPC: 3.917 (Simulation time: 00 hr 00 min 30 sec)
+Heartbeat CPU 0 instructions: 30000001 cycles: 7621370 heartbeat IPC: 3.975 cumulative IPC: 3.936 (Simulation time: 00 hr 00 min 44 sec)
+Heartbeat CPU 0 instructions: 40000002 cycles: 10166125 heartbeat IPC: 3.93 cumulative IPC: 3.935 (Simulation time: 00 hr 00 min 59 sec)
+Heartbeat CPU 0 instructions: 50000000 cycles: 12678830 heartbeat IPC: 3.98 cumulative IPC: 3.944 (Simulation time: 00 hr 01 min 14 sec)
+Heartbeat CPU 0 instructions: 60000001 cycles: 15223772 heartbeat IPC: 3.929 cumulative IPC: 3.941 (Simulation time: 00 hr 01 min 28 sec)
+Heartbeat CPU 0 instructions: 70000001 cycles: 17723772 heartbeat IPC: 4 cumulative IPC: 3.949 (Simulation time: 00 hr 01 min 43 sec)
+Heartbeat CPU 0 instructions: 80000000 cycles: 20281421 heartbeat IPC: 3.91 cumulative IPC: 3.944 (Simulation time: 00 hr 01 min 58 sec)
+Heartbeat CPU 0 instructions: 90000000 cycles: 22781421 heartbeat IPC: 4 cumulative IPC: 3.951 (Simulation time: 00 hr 02 min 12 sec)
+Heartbeat CPU 0 instructions: 100000000 cycles: 25339086 heartbeat IPC: 3.91 cumulative IPC: 3.946 (Simulation time: 00 hr 02 min 27 sec)
+Heartbeat CPU 0 instructions: 110000000 cycles: 27839086 heartbeat IPC: 4 cumulative IPC: 3.951 (Simulation time: 00 hr 02 min 41 sec)
+Heartbeat CPU 0 instructions: 120000002 cycles: 30351974 heartbeat IPC: 3.979 cumulative IPC: 3.954 (Simulation time: 00 hr 02 min 56 sec)
+Heartbeat CPU 0 instructions: 130000002 cycles: 32851974 heartbeat IPC: 4 cumulative IPC: 3.957 (Simulation time: 00 hr 03 min 09 sec)
+Heartbeat CPU 0 instructions: 140000002 cycles: 35351974 heartbeat IPC: 4 cumulative IPC: 3.96 (Simulation time: 00 hr 03 min 22 sec)
+Heartbeat CPU 0 instructions: 150000001 cycles: 37894032 heartbeat IPC: 3.934 cumulative IPC: 3.958 (Simulation time: 00 hr 03 min 36 sec)
+Heartbeat CPU 0 instructions: 160000001 cycles: 40394038 heartbeat IPC: 4 cumulative IPC: 3.961 (Simulation time: 00 hr 03 min 51 sec)
+Heartbeat CPU 0 instructions: 170000000 cycles: 43082887 heartbeat IPC: 3.719 cumulative IPC: 3.946 (Simulation time: 00 hr 04 min 06 sec)
+Heartbeat CPU 0 instructions: 180000001 cycles: 45582888 heartbeat IPC: 4 cumulative IPC: 3.949 (Simulation time: 00 hr 04 min 21 sec)
+Heartbeat CPU 0 instructions: 190000001 cycles: 48082888 heartbeat IPC: 4 cumulative IPC: 3.952 (Simulation time: 00 hr 04 min 35 sec)
+Heartbeat CPU 0 instructions: 200000001 cycles: 50582888 heartbeat IPC: 4 cumulative IPC: 3.954 (Simulation time: 00 hr 04 min 50 sec)
+Warmup finished CPU 0 instructions: 200000001 cycles: 50582889 cumulative IPC: 3.954 (Simulation time: 00 hr 04 min 50 sec)
+Warmup complete CPU 0 instructions: 200000001 cycles: 50582889 cumulative IPC: 3.954 (Simulation time: 00 hr 04 min 50 sec)
+Heartbeat CPU 0 instructions: 210000004 cycles: 53975835 heartbeat IPC: 2.947 cumulative IPC: 2.947 (Simulation time: 00 hr 05 min 12 sec)
+Heartbeat CPU 0 instructions: 220000000 cycles: 58101945 heartbeat IPC: 2.424 cumulative IPC: 2.66 (Simulation time: 00 hr 05 min 37 sec)
+Heartbeat CPU 0 instructions: 230000000 cycles: 64760507 heartbeat IPC: 1.502 cumulative IPC: 2.116 (Simulation time: 00 hr 06 min 11 sec)
+Heartbeat CPU 0 instructions: 240000003 cycles: 82236375 heartbeat IPC: 0.5722 c
