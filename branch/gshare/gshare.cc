@@ -10,7 +10,7 @@ namespace
 {
 constexpr std::size_t GLOBAL_HISTORY_LENGTH = 14;
 constexpr std::size_t COUNTER_BITS = 2;
-constexpr std::size_t GS_HISTORY_TABLE_SIZE = 16384;
+constexpr std::size_t GS_HISTORY_TABLE_SIZE = 16384; // 2^GLOBAL_HISTORY_LENGTH
 
 std::map<O3_CPU*, std::bitset<GLOBAL_HISTORY_LENGTH>> branch_history_vector;
 std::map<O3_CPU*, std::array<champsim::msl::fwcounter<COUNTER_BITS>, GS_HISTORY_TABLE_SIZE>> gs_history_table;
