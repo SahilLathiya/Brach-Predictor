@@ -1,0 +1,12 @@
+./config.sh champsim_config.json
+make
+bin/champsim --warmup_instructions 200000000 --simulation_instructions 500000000 ~/Desktop/Projects/ChampSim/tracer/600.perlbench_s-210B.champsimtrace.xz
+
+for Checking:
+bin/champsim --warmup_instructions 20000000 --simulation_instructions 50000000 ~/Desktop/Projects/ChampSim/tracer/600.perlbench_s-210B.champsimtrace.xz >> ~/Desktop/Projects/ChampSim/results/600.perlbench_s-210B$(date "+%Y.%m.%d-%H.%M.%S").txt
+bin/champsim --warmup_instructions 20000000 --simulation_instructions 50000000 ~/Desktop/Projects/ChampSim/tracer/638.imagick_s-4128B.champsimtrace.xz >> ~/Desktop/Projects/ChampSim/results/638.imagick_s-4128B$(date "+%Y.%m.%d-%H.%M.%S").txt
+bin/champsim --warmup_instructions 20000000 --simulation_instructions 50000000 ~/Desktop/Projects/ChampSim/tracer/641.leela_s-800B.champsimtrace.xz >> ~/Desktop/Projects/ChampSim/results/641.leela_s-800B$(date "+%Y.%m.%d-%H.%M.%S").txt
+
+script -c "bin/champsim --warmup_instructions 20000000 --simulation_instructions 50000000 ~/Desktop/Projects/ChampSim/tracer/638.imagick_s-4128B.champsimtrace.xz" ~/Desktop/Projects/Brach-Predictor/results/638.imagick_s-4128B$(date "+%Y.%m.%d-%H.%M.%S").txt
+
+script -c "bin/champsim --warmup_instructions 20000000 --simulation_instructions 50000000 ~/Desktop/Projects/Brach-Predictor/tracer/638.imagick_s-4128B.champsimtrace.xz" ~/Desktop/Projects/Brach-Predictor/results/638.imagick_s-4128B$(date "+%Y.%m.%d-%H.%M.%S").txt
