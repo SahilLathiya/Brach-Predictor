@@ -1,0 +1,69 @@
+#include <cmath>
+#include <cstdint>
+#include <iostream>
+#include <map>
+
+#include "msl/fwcounter.h"
+#include "ooo_cpu.h"
+
+namespace
+{
+
+constexpr std::size_t TAGE_LOGB = 13;
+constexpr std::size_t TAGE_NCOMP = 4;
+constexpr std::size_t TAGE_TBITS = 9;
+constexpr std::size_t TAGE_LOGG = (TAGE_LOGB - 3);
+
+// Abstracts away a bi-modal predictor. Basically contains code from branch/bimodal/bimodal.cc
+template <std::size_t _BIMODAL_TABLE_SIZE>
+class BimodalPredictor
+{
+public:
+  BimodalPredictor()
+  {
+    // Calculate BIMODAL_COPRIME. (See comment near the declaration of BIMODAL_COPRIME)
+    if (_BIMODAL_TABLE_SIZE && !(_BIMODAL_TABLE_SIZE & (_BIMODAL_TABLE_SIZE - 1))) {
+      // If BIMODAL_TABLE_SIZE is a power of 2
+      BIMODAL_COPRIME = _BIMODAL_TABLE_SIZE - 1;
+    } else {
+      for (BIMODAL_COPRIME = _BIMODAL_TABLE_SIZE - 1; BIMODAL_COPRIME >= 2; BIMODAL_COPRIME--) {
+        if (std::__gcd(_BIMODAL_TABLE_SIZE, BIMODAL_COPRIME) == 1)
+          break;
+      }
+    }
+  }
+
+  uint8_t predict_branch(O3_CPU* cpu, uint64_t ip)
+  {
+    auto hash = ip % BIMODAL_COPRIME;
+    auto value = bimodal_table[cpu][hash];
+
+    return value.value() >= (value.maximum / 2);
+  }
+
+  uint8_t update(O3_CPU* cpu, uint64_t ip, uint64_t branch_target, uint8_t taken)
+  {
+    auto hash = ip % BIMODAL_COPRIME;
+    bimodal_table[cpu][hash] += taken ? 1 : -1;
+  }
+
+private:
+  static constexpr std::size_t COUNTER_BITS = 2;
+  std::size_t BIMODAL_COPRIME; // Will be calculated during BimodalPredictor::BimodalPredictor()
+                               // This is necessary to maintain fair distribution of the pc hash.
+                               // Reference: https://stackoverflow.com/questions/1145217/why-should-hash-functions-use-a-prime-number-modulus
+  std::map<O3_CPU*, std::array<champsim::msl::fwcounter<COUNTER_BITS>, _BIMODAL_TABLE_SIZE>> bimodal_table;
+}; // class BimodalPredictor
+
+struct TAGEEntry {
+  champsim::msl::sfwcounter<3> ctr;
+  uint64_t tag;
+  uint8_t u;
+};
+} // namespace
+
+void O3_CPU::initialize_branch_predictor() {}
+
+uint8_t O3_CPU::predict_branch(uint64_t ip) {}
+
+void O3_CPU::last_branch_result(uint64_t ip, uint64_t branch_target, uint8_t taken, uint8_t branch_type) {}

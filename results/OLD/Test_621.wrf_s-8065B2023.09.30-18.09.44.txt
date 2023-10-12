@@ -1,0 +1,20 @@
+Script started on 2023-09-30 18:09:44+05:30 [TERM="screen.xterm-256color" TTY="/dev/pts/4" COLUMNS="153" LINES="18"]
+WARNING: physical memory size is smaller than virtual memory size.
+WARNING: option --warmup_instructions is deprecated. Use --warmup-instructions instead.
+WARNING: option --simulation_instructions is deprecated. Use --simulation-instructions instead.
+
+*** ChampSim Multicore Out-of-Order Simulator ***
+Warmup Instructions: 20000000
+Simulation Instructions: 50000000
+Number of CPUs: 1
+Page size: 4096
+
+Ratio: 2.80204
+Component sizes: 10 28 78 219 
+Off-chip DRAM Size: 4 GiB Channels: 1 Width: 64-bit Data Race: 3200 MT/s
+d Heartbeat CPU 0 instructions: 10000000 cycles: 2605371 heartbeat IPC: 3.838 cumulative IPC: 3.838 (Simulation time: 00 hr 00 min 15 sec)
+Heartbeat CPU 0 instructions: 20000000 cycles: 5105371 heartbeat IPC: 4 cumulative IPC: 3.917 (Simulation time: 00 hr 00 min 30 sec)
+Warmup finished CPU 0 instructions: 20000000 cycles: 5105372 cumulative IPC: 3.917 (Simulation time: 00 hr 00 min 30 sec)
+Warmup complete CPU 0 instructions: 20000000 cycles: 5105372 cumulative IPC: 3.917 (Simulation time: 00 hr 00 min 30 sec)
+^C
+Script done on 2023-09-30 18:10:40+05:30 [COMMAND_EXIT_CODE="130"]
