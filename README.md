@@ -5,8 +5,11 @@ ChampSim is a trace-based simulator for a microarchitecture study.
 
 # Download Champsim
 To download Champsim, please navigate to the following link: https://github.com/ChampSim/ChampSim
-Once there, you can clone the repository to obtain the necessary files.
-
+Once there, you can clone the repository to obtain the necessary files.<br><br>
+or you can use following command
+```
+git clone https://github.com/ChampSim/ChampSim.git
+```
 # Download dependencies for champsim
 
 ChampSim uses [vcpkg](https://vcpkg.io) to manage its dependencies. In this repository, vcpkg is included as a submodule. You can download the dependencies with
