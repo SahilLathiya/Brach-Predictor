@@ -21,7 +21,7 @@ vcpkg/vcpkg install
 
 # Compile
 
-ChampSim takes a JSON configuration script. Examine `champsim_config.json` for a fully-specified example. All options described in this file are optional and will be replaced with defaults if not specified. The configuration scrip can also be run without input, in which case an empty file is assumed.
+ChampSim takes a JSON configuration script. Examine `champsim_config.json` for a fully-specified example. All options described in this file are optional and will be replaced with defaults if not specified. The configuration script can also be run without input, in which case an empty file is assumed.
 ```
 $ ./config.sh champsim_config.json
 $ make
