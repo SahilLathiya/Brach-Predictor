@@ -30,6 +30,7 @@
 #include <fmt/core.h>
 #include <fmt/ranges.h>
 
+extern int count_branch[8];
 std::chrono::seconds elapsed_time();
 
 long O3_CPU::operate()
@@ -180,6 +181,7 @@ bool O3_CPU::do_predict_branch(ooo_model_instr& arch_instr)
 
     impl_update_btb(arch_instr.ip, arch_instr.branch_target, arch_instr.branch_taken, arch_instr.branch_type);
     impl_last_branch_result(arch_instr.ip, arch_instr.branch_target, arch_instr.branch_taken, arch_instr.branch_type);
+    count_branch[arch_instr.branch_type]++;
   }
 
   return stop_fetch;

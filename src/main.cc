@@ -29,7 +29,7 @@
 #include "vmem.h"
 #include <CLI/CLI.hpp>
 #include <fmt/core.h>
-
+int count_branch[8];
 namespace champsim
 {
 std::vector<phase_stats> main(environment& env, std::vector<phase_info>& phases, std::vector<tracereader>& traces);
@@ -117,5 +117,13 @@ int main(int argc, char** argv)
     }
   }
 
+  fmt::print("NOT_BRANCH: {}\n",count_branch[0]);
+  fmt::print("BRANCH_DIRECT_JUMP: {}\n",count_branch[1]);
+  fmt::print("BRANCH_INDIRECT: {}\n",count_branch[2]);
+  fmt::print("BRANCH_CONDITIONAL: {}\n",count_branch[3]);
+  fmt::print("BRANCH_DIRECT_CALL: {}\n",count_branch[4]);
+  fmt::print("BRANCH_INDIRECT_CALL: {}\n",count_branch[5]);
+  fmt::print("BRANCH_RETURN: {}\n",count_branch[6]);
+  fmt::print("BRANCH_OTHER: {}\n",count_branch[7]);
   return 0;
 }

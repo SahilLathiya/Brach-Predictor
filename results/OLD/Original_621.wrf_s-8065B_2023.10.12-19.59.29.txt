@@ -1,0 +1,4 @@
+Script started on 2023-10-12 19:59:29+05:30 [TERM="screen.xterm-256color" TTY="/dev/pts/9" COLUMNS="143" LINES="18"]
+bash: line 1: bin/champsim_2: No such file or directory
+
+Script done on 2023-10-12 19:59:29+05:30 [COMMAND_EXIT_CODE="127"]

@@ -8,11 +8,11 @@
 constexpr std::size_t NUM_BANKS = 4;
 constexpr std::size_t BIMODAL_SIZE = 8198;
 constexpr std::size_t LEN_BIMODAL = 2;
-constexpr std::size_t LEN_GLOBAL = 13;
-constexpr std::size_t LEN_TAG = 15;
+constexpr std::size_t LEN_GLOBAL = 14;
+constexpr std::size_t LEN_TAG = 10;
 constexpr std::size_t LEN_COUNTS = 3;
-constexpr std::size_t MIN_HISTORY_LEN = 10;
-constexpr std::size_t MAX_HISTORY_LEN = 255;
+constexpr std::size_t MIN_HISTORY_LEN = 4;
+constexpr std::size_t MAX_HISTORY_LEN = 244;
 // TAGE defines end here.
 
 using MyTage = Tage<NUM_BANKS, BIMODAL_SIZE, LEN_BIMODAL, LEN_GLOBAL, LEN_TAG, LEN_COUNTS, MIN_HISTORY_LEN, MAX_HISTORY_LEN>;

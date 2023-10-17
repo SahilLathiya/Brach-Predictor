@@ -41,8 +41,8 @@
 #include "util/lru_table.h"
 #include <type_traits>
 
+extern int count_branch[8];
 enum STATUS { INFLIGHT = 1, COMPLETED = 2 };
-
 class CACHE;
 class CacheBus
 {

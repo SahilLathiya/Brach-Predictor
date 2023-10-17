@@ -3,14 +3,14 @@ make -j10
 bin/champsim --warmup_instructions 200000000 --simulation_instructions 500000000 ~/Desktop/Projects/ChampSim/tracer/600.perlbench_s-210B.champsimtrace.xz
 
 For Original output:
-script -c "bin/champsim --warmup_instructions 200000000 --simulation_instructions 500000000 ~/Desktop/Projects/Brach-Predictor/tracer/621.wrf_s-8065B.champsimtrace.xz" ~/Desktop/Projects/Brach-Predictor/results/Original_621.wrf_s-8065B_$(date "+%Y.%m.%d-%H.%M.%S").txt
-script -c "bin/champsim --warmup_instructions 200000000 --simulation_instructions 500000000 ~/Desktop/Projects/Brach-Predictor/tracer/638.imagick_s-4128B.champsimtrace.xz" ~/Desktop/Projects/Brach-Predictor/results/Original_638.imagick_s-4128B_$(date "+%Y.%m.%d-%H.%M.%S").txt
-script -c "bin/champsim --warmup_instructions 200000000 --simulation_instructions 500000000 ~/Desktop/Projects/Brach-Predictor/tracer/654.roms_s-1613B.champsimtrace.xz" ~/Desktop/Projects/Brach-Predictor/results/Original_654.roms_s-1613B_$(date "+%Y.%m.%d-%H.%M.%S").txt
+script -c "bin/champsim_2 --warmup_instructions 200000000 --simulation_instructions 500000000 ~/Desktop/Projects/Brach-Predictor/tracer/621.wrf_s-8065B.champsimtrace.xz" ~/Desktop/Projects/Brach-Predictor/results/Original_621.wrf_s-8065B_$(date "+%Y.%m.%d-%H.%M.%S").txt
+script -c "bin/champsim_2 --warmup_instructions 200000000 --simulation_instructions 500000000 ~/Desktop/Projects/Brach-Predictor/tracer/638.imagick_s-4128B.champsimtrace.xz" ~/Desktop/Projects/Brach-Predictor/results/Original_638.imagick_s-4128B_$(date "+%Y.%m.%d-%H.%M.%S").txt
+script -c "bin/champsim_2 --warmup_instructions 200000000 --simulation_instructions 500000000 ~/Desktop/Projects/Brach-Predictor/tracer/654.roms_s-1613B.champsimtrace.xz" ~/Desktop/Projects/Brach-Predictor/results/Original_654.roms_s-1613B_$(date "+%Y.%m.%d-%H.%M.%S").txt
 
 for Testing
-script -c "bin/champsim --warmup_instructions 20000000 --simulation_instructions 50000000 ~/Desktop/Projects/Brach-Predictor/tracer/621.wrf_s-8065B.champsimtrace.xz" ~/Desktop/Projects/Brach-Predictor/results/Test_621.wrf_s-8065B$(date "+%Y.%m.%d-%H.%M.%S").txt
-script -c "bin/champsim --warmup_instructions 20000000 --simulation_instructions 50000000 ~/Desktop/Projects/Brach-Predictor/tracer/638.imagick_s-4128B.champsimtrace.xz" ~/Desktop/Projects/Brach-Predictor/results/Test_638.imagick_s-4128B_$(date "+%Y.%m.%d-%H.%M.%S").txt
-script -c "bin/champsim --warmup_instructions 20000000 --simulation_instructions 50000000 ~/Desktop/Projects/Brach-Predictor/tracer/654.roms_s-1613B.champsimtrace.xz" ~/Desktop/Projects/Brach-Predictor/results/Test_654.roms_s-1613B_$(date "+%Y.%m.%d-%H.%M.%S").txt
+script -c "bin/champsim --warmup_instructions 2000000 --simulation_instructions 5000000 ~/Desktop/Projects/Brach-Predictor/tracer/621.wrf_s-8065B.champsimtrace.xz" ~/Desktop/Projects/Brach-Predictor/results/Test_621.wrf_s-8065B$(date "+%Y.%m.%d-%H.%M.%S").txt
+script -c "bin/champsim --warmup_instructions 2000000 --simulation_instructions 5000000 ~/Desktop/Projects/Brach-Predictor/tracer/638.imagick_s-4128B.champsimtrace.xz" ~/Desktop/Projects/Brach-Predictor/results/Test_638.imagick_s-4128B_$(date "+%Y.%m.%d-%H.%M.%S").txt
+script -c "bin/champsim --warmup_instructions 2000000 --simulation_instructions 5000000 ~/Desktop/Projects/Brach-Predictor/tracer/654.roms_s-1613B.champsimtrace.xz" ~/Desktop/Projects/Brach-Predictor/results/Test_654.roms_s-1613B_$(date "+%Y.%m.%d-%H.%M.%S").txt
 
 git add .
 git commit -m "Comment"
