@@ -1,10 +1,5 @@
 # Brach-Predictor Evauation
 
-![GitHub](https://img.shields.io/github/license/ChampSim/ChampSim)
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ChampSim/ChampSim/test.yml)
-![GitHub forks](https://img.shields.io/github/forks/ChampSim/ChampSim)
-[![Coverage Status](https://coveralls.io/repos/github/ChampSim/ChampSim/badge.svg?branch=develop)](https://coveralls.io/github/ChampSim/ChampSim?branch=develop)
-
 For our project, we utilized the Champsim simulator, a powerful and versatile tool, which allowed us to accurately model and analyze various system behaviors, contributing significantly to our research objectives and findings, and enhancing our overall understanding of the subject matter.
 ChampSim is a trace-based simulator for a microarchitecture study.
 
