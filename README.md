@@ -31,6 +31,10 @@ $ make
 
 Traces used for this project can be found here. (https://dpc3.compas.cs.stonybrook.edu/champsim-traces/speccpu/)
 
+# How to use downloaded traces
+
+Download the appropriate traces and place them within the 'tracer' folder.
+
 # Run simulation
 
 Execute the binary directly.
@@ -50,7 +54,7 @@ $ cp branch/bimodal/bimodal.cc branch/mybranch/mybranch.cc
 
 **Work on your algorithms with your favorite text editor**
 ```
-$ vim branch/mypref/mypref.cc
+$ vim branch/mybranch/mybranch.cc
 ```
 
 **Compile and test**
@@ -69,8 +73,3 @@ $ ./config.sh champsim_config.json
 $ make
 $ script -c "bin/champsim --warmup_instructions 200000000 --simulation_instructions 500000000 ~/Desktop/Projects/Brach-Predictor/tracer/621.wrf_s-8065B.champsimtrace.xz" ~/Desktop/Projects/Brach-Predictor/results/Original_621.wrf_s-8065B_$(date "+%Y.%m.%d-%H.%M.%S").txt
 ```
-
-# How to copy traces
-
-Download the appropriate traces and place them within the 'tracer' folder.
-
