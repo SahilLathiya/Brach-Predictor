@@ -6,7 +6,7 @@ ChampSim is a trace-based simulator for a microarchitecture study.
 # Download Champsim
 To download Champsim, please navigate to the following link: https://github.com/ChampSim/ChampSim
 Once there, you can clone the repository to obtain the necessary files.<br><br>
-or you can use following command
+Or you can use following command
 ```
 git clone https://github.com/ChampSim/ChampSim.git
 ```
@@ -29,7 +29,7 @@ $ make
 
 # Download DPC-3 trace
 
-Traces used for the 3rd Data Prefetching Championship (DPC-3) can be found here. (https://dpc3.compas.cs.stonybrook.edu/champsim-traces/speccpu/)
+Traces used for this project can be found here. (https://dpc3.compas.cs.stonybrook.edu/champsim-traces/speccpu/)
 
 # Run simulation
 
